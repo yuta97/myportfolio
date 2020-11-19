@@ -22,6 +22,10 @@ export default {
 <style>
 .workBox {
   border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  margin-left: 30px;
+  margin-bottom: 30px;
   width: 40%;
 }
 </style>

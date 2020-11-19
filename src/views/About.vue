@@ -1,23 +1,34 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <img>
-      <table>
-        <tbody>
-          <tr v-for="(info,index) in infos" :key="index">
-            <th>{{ info.key }}</th>
-            <td v-if="info.url">
-              <a :href="info.url" >
-                {{ info.value }}
+  <v-simple-table>
+    <template v-slot:default>
+      <!-- <thead>
+        <tr>
+          <th class="text-left">
+            Name
+          </th>
+          <th class="text-left">
+            Calories
+          </th>
+        </tr>
+      </thead> -->
+      <tbody>
+        <tr
+          v-for="item in infos"
+          :key="item.key"
+        >
+          <td>{{ item.key }}</td>
+          <td v-if="item.url">
+              <a :href="item.url" >
+                {{ item.value }}
               </a>
             </td>
             <td v-else>
-              {{ info.value }}
+              {{ item.value }}
             </td>
-          </tr>
-        </tbody>
-      </table>
-  </div>
+        </tr>
+      </tbody>
+    </template>
+  </v-simple-table>
 </template>
 
 <script>
@@ -32,6 +43,28 @@ export default {
         {key: 'GitHub', value: 'yuta97', url: 'https://github.com/yuta97'},
         {key: 'Qiita', value: 'yokubarisanyuyu', url: 'https://qiita.com/yokubarisanyuyu'},
         {key: 'Twitter', value: 'yokubarisanyuyu', url: 'https://twitter.com/yokubarisanyuyu'}
+      ],
+      desserts: [
+          {
+            name: 'Frozen Yogurt',
+            calories: 159,
+          },
+          {
+            name: 'Ice cream sandwich',
+            calories: 237,
+          },
+          {
+            name: 'Eclair',
+            calories: 262,
+          },
+          {
+            name: 'Cupcake',
+            calories: 305,
+          },
+          {
+            name: 'Gingerbread',
+            calories: 356,
+          }
       ]
     }
   }

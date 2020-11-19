@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/career">Career</router-link> |
       <router-link to="/skills">Skills</router-link> |
-      <router-link to="/works">Works</router-link> |
+      <router-link to="/works">Works</router-link> 
     </div>
     <router-view/>
   </div>

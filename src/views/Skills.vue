@@ -1,5 +1,28 @@
 <template>
-  <div class="hello">
+  <v-simple-table>
+    <template v-slot:default>
+      <!-- <thead>
+        <tr>
+          <th class="text-left">
+            Name
+          </th>
+          <th class="text-left">
+            Calories
+          </th>
+        </tr>
+      </thead> -->
+      <tbody>
+        <tr
+          v-for="skill in skills"
+          :key="skill.name"
+        >
+          <td>{{ skill.name }}</td>
+          
+        </tr>
+      </tbody>
+    </template>
+  </v-simple-table>
+  <!-- <div class="hello">
     <h1>{{ msg }}</h1>
     <img>
       <table>
@@ -9,7 +32,7 @@
           </ul>
         </tbody>
       </table>
-  </div>
+  </div> -->
 </template>
 
 <script>

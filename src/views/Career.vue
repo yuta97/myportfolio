@@ -1,17 +1,30 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <img>
-      <table>
-        <tbody>
-          <tr v-for="(career,index) in careers" :key="index">
-            <th>{{ career.key }}</th>
-            <td>{{ career.skill }}</td>
-            <td>{{ career.term }}</td>
-            <td>{{ career.description }}</td>
-          </tr>
-        </tbody>
-      </table>
+  <div>
+    <v-switch
+      v-model="reverse"
+      label="Toggle reverse"
+    ></v-switch>
+    <v-timeline
+      :reverse="reverse"
+    >
+      <v-timeline-item
+        v-for="career in careers"
+        :key="career"
+      >
+        <!-- <span slot="opposite">Tus eu perfecto</span> -->
+        <v-card >
+          <v-card-title>
+            {{ career.key }}
+          </v-card-title>
+          <v-card-text>
+            
+              <p>{{ career.skill }}</p>
+              <p>{{ career.term }}</p>
+              <p>{{ career.description }}</p>
+          </v-card-text>
+        </v-card>
+      </v-timeline-item>
+    </v-timeline>
   </div>
 </template>
 
@@ -20,6 +33,7 @@ export default {
   name: 'about',
   data () {
     return {
+      reverse: true,
       msg: 'career',
       careers: [
         {
@@ -31,7 +45,7 @@ export default {
         },
         {
           key: 'いい生活',
-          skill: 'Vue.ls',
+          skill: 'Vue.js',
           term: '2020年9月　（1週間）',
           description:
             'APIを使い不動産検索アプリ開発'

@@ -20,7 +20,7 @@ export default {
       msg: 'Works',
       works: [
         {name: 'J検索くん', url: '', image: '', description: 'サッカーJリーグのデータをスクレイピングして、検索できるサービス', skill: 'Python'},
-        {name: '課題通知くん', url: '', image: '', description: '大学の課題サイトをスクレイピングし、未修の課題をLineに通知してくれる', skill: 'Python'},
+        {name: '課題通知くん', url: '', image: '', description: '大学の課題サイトをスクレイピングし、未修の課題をLineに通知してくれるツール', skill: 'Python'},
         {name: 'ポートフォリオ', url: '', image: '', description: 'このサイトです', skill: 'Vue.js'}
       ]
     }
