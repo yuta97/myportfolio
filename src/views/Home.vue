@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h1>Yuta's Portfolio</h1>
     
   </div>
 </template>

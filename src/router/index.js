@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import About from '../views/About'
-import Skills from '../views/Skills'
-import Works from '../views/Works'
-import Career from '../views/Career'
+import Home from '@/views/Home'
+import About from '@/views/About'
+import Skills from '@/views/Skills'
+import Works from '@/views/Works'
+import Career from '@/views/Career'
 
 Vue.use(VueRouter)
 
@@ -45,7 +45,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes
 })

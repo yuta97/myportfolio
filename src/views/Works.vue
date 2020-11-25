@@ -32,6 +32,7 @@ export default {
 <style scoped>
 h1, h2 {
   font-weight: normal;
+  margin-bottom: 50px;
 }
 ul {
   list-style-type: none;
@@ -47,5 +48,6 @@ a {
 .works {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 10%;
 }
 </style>

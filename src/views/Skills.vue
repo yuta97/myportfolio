@@ -1,38 +1,48 @@
 <template>
   <v-simple-table>
     <template v-slot:default>
-      <!-- <thead>
-        <tr>
-          <th class="text-left">
-            Name
-          </th>
-          <th class="text-left">
-            Calories
-          </th>
-        </tr>
-      </thead> -->
+      <thead>
+          <tr>
+            <th class="text-left">
+              言語
+            </th>
+            <th class="text-left">
+              フレームワーク
+            </th>
+          </tr>
+        </thead>
       <tbody>
         <tr
-          v-for="skill in skills"
-          :key="skill.name"
+          v-for="language in languages"
+          :key="language.name"
         >
-          <td>{{ skill.name }}</td>
-          
+        <td>{{ language.name }}</td>
+        <td>{{ language.fw }}</td>         
+        </tr>
+      </tbody>
+
+      <thead>
+          <tr>
+            <th class="text-left">
+              その他
+            </th>
+            <th class="text-left">
+            </th>
+          </tr>
+        </thead>
+      <tbody>
+        <tr
+          v-for="other in others"
+          :key="other.name"
+        >
+        <td>{{ other.name }}</td>
+        <td>{{ other.detail }}</td>         
         </tr>
       </tbody>
     </template>
+
+    
   </v-simple-table>
-  <!-- <div class="hello">
-    <h1>{{ msg }}</h1>
-    <img>
-      <table>
-        <tbody>
-          <ul v-for="(skill,index) in skills" :key="index">
-            <li>{{ skill.name }}</li>
-          </ul>
-        </tbody>
-      </table>
-  </div> -->
 </template>
 
 <script>
@@ -41,15 +51,14 @@ export default {
   data () {
     return {
       msg: 'Skills',
-      skills: [
-        { name: 'Python' },
-        { name: 'Ruby' },
-        { name: 'JavaScript' },
-        { name: 'Vue.js' },
-        { name: 'AWS' },
-        { name: 'GCP' },
-        { name: 'GitHub' },
-        { name: 'Docker' }
+      languages: [
+        { name: 'Python' ,fw: 'Flask, Django'},
+        { name: 'Ruby' ,fw: 'Ruby on Rails' },
+        { name: 'JavaScript' ,fw: 'Vue.js' },
+      ],
+      others:[
+        { name: 'Cloud' , detail: 'AWS, GCP'},
+        { name: 'tool', detail: 'GitHub, Ansible'}
       ]
     }
   }
