@@ -3,7 +3,22 @@
     <h1>{{ item.name }}</h1>
     <p>{{ item.description }}</p>
     <img>
-    <p>{{ item.url }}</p>
+    <p> 使用技術：{{ item.skill}} など</p>
+    <p v-if="item.url">
+      <a :href="item.url" >
+        {{ item.urlDescription }}
+      </a>
+    </p>
+    <p v-else>
+      {{ item.urlurlDescription }}
+    </p>
+    <a :href="item.GitHubUrl">
+      GitHub
+    </a>
+    
+    
+    
+
   </div>
 </template>
 
@@ -21,10 +36,12 @@ export default {
 
 <style>
 .workBox {
+  padding: 15px 0;
   border-style: solid;
   border-radius: 10px;
   border-width: 1px;
   margin: 30px ;
-  width: 40%;
+  width: 42%;
+  box-shadow: 5px 5px;
 }
 </style>

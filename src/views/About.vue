@@ -1,34 +1,27 @@
 <template>
-  <v-simple-table>
-    <template v-slot:default>
-      <!-- <thead>
-        <tr>
-          <th class="text-left">
-            Name
-          </th>
-          <th class="text-left">
-            Calories
-          </th>
-        </tr>
-      </thead> -->
-      <tbody>
-        <tr
-          v-for="item in infos"
-          :key="item.key"
-        >
-          <td>{{ item.key }}</td>
-          <td v-if="item.url">
-              <a :href="item.url" >
+  <div class='about'>
+    <h1>Works</h1>
+    <v-simple-table>
+      <template v-slot:default>
+        <tbody>
+          <tr
+            v-for="item in infos"
+            :key="item.key"
+          >
+            <td>{{ item.key }}</td>
+            <td v-if="item.url">
+                <a :href="item.url" >
+                  {{ item.value }}
+                </a>
+              </td>
+              <td v-else>
                 {{ item.value }}
-              </a>
-            </td>
-            <td v-else>
-              {{ item.value }}
-            </td>
-        </tr>
-      </tbody>
-    </template>
-  </v-simple-table>
+              </td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
+  </div>
 </template>
 
 <script>
@@ -73,16 +66,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.about{
+  margin-top: 50px;
+}
 h1, h2 {
   font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 a {
   color: #42b983;

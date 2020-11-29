@@ -1,48 +1,49 @@
 <template>
-  <v-simple-table>
-    <template v-slot:default>
-      <thead>
-          <tr>
-            <th class="text-left">
-              言語
-            </th>
-            <th class="text-left">
-              フレームワーク
-            </th>
+  <div class='skills'>
+    <h1>Skills</h1>
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+            <tr>
+              <th class="text-left">
+                言語
+              </th>
+              <th class="text-left">
+                フレームワーク
+              </th>
+            </tr>
+          </thead>
+        <tbody>
+          <tr
+            v-for="language in languages"
+            :key="language.name"
+          >
+          <td>{{ language.name }}</td>
+          <td>{{ language.fw }}</td>         
           </tr>
-        </thead>
-      <tbody>
-        <tr
-          v-for="language in languages"
-          :key="language.name"
-        >
-        <td>{{ language.name }}</td>
-        <td>{{ language.fw }}</td>         
-        </tr>
-      </tbody>
-
-      <thead>
-          <tr>
-            <th class="text-left">
-              その他
-            </th>
-            <th class="text-left">
-            </th>
+        </tbody>
+  
+        <thead>
+            <tr>
+              <th class="text-left">
+                その他
+              </th>
+              <th class="text-left">
+              </th>
+            </tr>
+          </thead>
+        <tbody>
+          <tr
+            v-for="other in others"
+            :key="other.name"
+          >
+          <td>{{ other.name }}</td>
+          <td>{{ other.detail }}</td>         
           </tr>
-        </thead>
-      <tbody>
-        <tr
-          v-for="other in others"
-          :key="other.name"
-        >
-        <td>{{ other.name }}</td>
-        <td>{{ other.detail }}</td>         
-        </tr>
-      </tbody>
-    </template>
-
-    
-  </v-simple-table>
+        </tbody>
+      </template>
+    </v-simple-table>
+  </div>
 </template>
 
 <script>
@@ -67,16 +68,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.skills{
+  margin-top: 50px;
+}
 h1, h2 {
   font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 a {
   color: #42b983;

@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <h1>Yuta's Portfolio</h1>
-    
+    <p>Yuta's Portfolio</p>
   </div>
 </template>
 
@@ -15,3 +14,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.home { 
+  padding: 25% 0;
+  background-color: #CCFFCC;
+  height: 500px;
+}
+p {
+  font-size: 80px;
+}
+</style>

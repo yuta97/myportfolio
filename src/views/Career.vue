@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='career'>
     <v-switch
       v-model="reverse"
       label="Toggle reverse"
@@ -72,6 +72,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.career{
+  margin-top: 50px;
+}
 h1, h2 {
   font-weight: normal;
 }
